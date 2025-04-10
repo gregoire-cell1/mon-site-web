@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Talk2Stud - La plateforme moderne qui connecte lycéens et étudiants pour obtenir des informations transparentes sur les formations." />
+  <title>Talk2Stud - Modernité & Transparence</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar" role="navigation">
+      <div class="logo">
+        <a href="#home" data-page="home">
+          <img src="logo.png" alt="Talk2Stud Logo" />
+          Talk2Stud
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" data-page="home" class="nav-link active">Accueil</a></li>
+        <li><a href="#about" data-page="about" class="nav-link">À propos</a></li>
+        <li><a href="#features" data-page="features" class="nav-link">Fonctionnalités</a></li>
+        <li><a href="#formations" data-page="formations" class="nav-link">Formations</a></li>
+        <li><a href="#testimonials" data-page="testimonials" class="nav-link">Témoignages</a></li>
+        <li><a href="#contact" data-page="contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECTION ACCUEIL -->
+  <section id="home" class="page-section active-section">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Bienvenue sur Talk2Stud</h1>
+        <p>La plateforme qui connecte lycéens et étudiants pour obtenir des retours d'expérience transparents sur les formations.</p>
+        <a href="#formations" data-page="formations" class="btn-main">Explorer les formations</a>
+      </div>
+      <div class="hero-media">
+        <img src="https://vhugo.org/wp-content/uploads/2024/09/orientation.jpg" alt="Illustration de la plateforme" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION FORMATIONS -->
+  <section id="formations" class="page-section">
+    <div class="section-header">
+      <h2>Nos Formations</h2>
+      <p>Découvrez notre catalogue de formations pour trouver celle qui vous correspond.</p>
+      <div id="filters">
+        <input type="text" id="searchInput" placeholder="🔍 Rechercher une formation…" />
+      </div>
+    </div>
+    <div id="cardsContainer" class="cards-grid">
+      <!-- Les cartes de formations seront injectées via JavaScript -->
+    </div>
+  </section>
+
+  <!-- POPUP POUR "CONTACTER UN ÉTUDIANT" -->
+  <div id="studentPopup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="toggleStudentPopup(false)">&times;</button>
+      <h3>Contacter un étudiant</h3>
+      <div id="popupContent">
+        <!-- La liste des étudiants sera injectée ici -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION CONTACT (exemple) -->
+  <section id="contact" class="page-section">
+    <div class="section-header">
+      <h2>Contactez-nous</h2>
+      <p>Vous avez une question ? Remplissez le formulaire ci-dessous.</p>
+    </div>
+    <form id="contactForm" class="contact-form" aria-label="Formulaire de contact">
+      <div class="form-group">
+        <label for="name">Nom / Prénom</label>
+        <input type="text" id="name" placeholder="Votre nom" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Votre email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <button type="submit" class="btn-main">Envoyer le message</button>
+    </form>
+    <div id="contactConfirmation" class="contact-confirmation hidden">
+      <p>Merci pour votre message ! Nous reviendrons vers vous rapidement.</p>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Talk2Stud • Conçu par des étudiants, pour des étudiants.</p>
+  </footer>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
 
